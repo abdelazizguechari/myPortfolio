@@ -26,18 +26,25 @@ import {
 } from "../assets";
 
 export const navLinks = [
+ 
   {
     id: "about",
     title: "About",
   },
   {
     id: "work",
-    title: "Work",
+    title: "Tech",
+  },
+    {
+    id: "project",
+    title: "Project",
   },
   {
     id: "contact",
     title: "Contact",
   },
+
+ 
 ];
 
 const services = [
@@ -46,11 +53,11 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Graphic Designer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "UI/UX Designer",
     icon: backend,
   },
   {
@@ -58,6 +65,7 @@ const services = [
     icon: creator,
   },
 ];
+
 
 const technologies = [
   {
@@ -73,7 +81,7 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
+    name: "bootstrap",
     icon: typescript,
   },
   {
@@ -81,7 +89,7 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
+    name: "illustrator",
     icon: redux,
   },
   {
@@ -93,11 +101,11 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
+    name: "mysql",
     icon: mongodb,
   },
   {
-    name: "Three JS",
+    name: "after effect",
     icon: threejs,
   },
   {
@@ -198,68 +206,70 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Traveler",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A travel agency platform that allows users to explore destinations, book travel packages, and manage their trips seamlessly with curated recommendations and customer support",
     tags: [
       {
-        name: "react",
+        name: "html",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "css",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "mysql",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/abdelazizguechari/travel-agance",
   },
   {
-    name: "Job IT",
+    name: "ENTV Park Auto System",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A comprehensive management system for ENTV's vehicle fleet, developed to streamline fleet operations and improve efficiency. schedule routine maintenance.The platform also includes notifications",
+    tags: [
+      {
+        name: "laravel",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jobit,
+    source_code_link: "https://github.com/abdelazizguechari/entv-auto",
+  },
+  {
+    name: "NBR Airways System",
+    description:
+      "An airline management system for NBR Airways that streamlines flight scheduling, booking management, and customer communication, ensuring an efficient and user-friendly",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "tailwand",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
+        name: "inertia",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/abdelazizguechari/afor",
   },
+
+  
 ];
 
 export { services, technologies, experiences, testimonials, projects };

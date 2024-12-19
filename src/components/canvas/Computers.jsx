@@ -1,78 +1,124 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import React, { useRef, useEffect } from 'react';
+import { useGLTF, useFBX, useAnimations } from '@react-three/drei';
+import * as THREE from 'three'; // Import THREE
 
-import CanvasLoader from "../Loader";
+const Developer = ({ animationName = 'typing', ...props }) => {
+  const group = useRef();
+  
+  // Load the GLTF model
+  const { scene, nodes, materials } = useGLTF('/modele/animations/avatar.glb');
 
-const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  // Load FBX animations
+  const { animations: saluteAnimation } = useFBX('/modele/animations/salute.fbx');
+  const { animations: idleAnimation } = useFBX('/modele/animations/idle.fbx');
+  const { animations: clappingAnimation } = useFBX('/modele/animations/clapping.fbx');
+  const { animations: victoryAnimation } = useFBX('/modele/animations/victory.fbx');
+ 
 
-  return (
-    <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
-      />
-      <pointLight intensity={1} />
-      <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
-      />
-    </mesh>
-  );
-};
+  // Add names to animations
+  saluteAnimation[0].name = 'salute';
+  idleAnimation[0].name = 'idle';
+  clappingAnimation[0].name = 'clapping';
+  victoryAnimation[0].name = 'victory';
+ 
+  // Combine all animations into a single array
+  const animations = [
+    saluteAnimation[0],
+    idleAnimation[0],
+    clappingAnimation[0],
+    victoryAnimation[0],
 
-const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+    
+  ];
+
+  // Use animations in the group
+  const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    // Ensure the requested animation is played
+    if (actions[animationName]) {
+      actions[animationName].reset().fadeIn(0.5).play();
+    }
 
-    // Set the initial value of the `isMobile` state variable
-    setIsMobile(mediaQuery.matches);
-
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
-
-    // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    // Remove the listener when the component is unmounted
+    // Fade out the animation when component unmounts or animation changes
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+      if (actions[animationName]) {
+        actions[animationName].fadeOut(0.5);
+      }
     };
-  }, []);
+  }, [animationName, actions]);
 
   return (
-    <Canvas
-      frameloop='demand'
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
-
-      <Preload all />
-    </Canvas>
+    <group ref={group} {...props} scale={[2, 2, 2]} dispose={null}>
+      {/* Rendering the skinned meshes dynamically */}
+      <primitive object={nodes.Hips} />
+      <skinnedMesh
+        name="EyeLeft"
+        geometry={nodes.EyeLeft.geometry}
+        material={materials.Wolf3D_Eye}
+        skeleton={nodes.EyeLeft.skeleton}
+        morphTargetDictionary={nodes.EyeLeft.morphTargetDictionary}
+        morphTargetInfluences={nodes.EyeLeft.morphTargetInfluences}
+      />
+      <skinnedMesh
+        name="EyeRight"
+        geometry={nodes.EyeRight.geometry}
+        material={materials.Wolf3D_Eye}
+        skeleton={nodes.EyeRight.skeleton}
+        morphTargetDictionary={nodes.EyeRight.morphTargetDictionary}
+        morphTargetInfluences={nodes.EyeRight.morphTargetInfluences}
+      />
+      <skinnedMesh
+        name="Wolf3D_Head"
+        geometry={nodes.Wolf3D_Head.geometry}
+        material={materials.Wolf3D_Skin}
+        skeleton={nodes.Wolf3D_Head.skeleton}
+        morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary}
+        morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences}
+      />
+      <skinnedMesh
+        name="Wolf3D_Teeth"
+        geometry={nodes.Wolf3D_Teeth.geometry}
+        material={materials.Wolf3D_Teeth}
+        skeleton={nodes.Wolf3D_Teeth.skeleton}
+        morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary}
+        morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences}
+      />
+      <skinnedMesh
+        geometry={nodes.Wolf3D_Hair.geometry}
+        material={materials.Wolf3D_Hair}
+        skeleton={nodes.Wolf3D_Hair.skeleton}
+      />
+      <skinnedMesh
+        geometry={nodes.Wolf3D_Glasses.geometry}
+        material={materials.Wolf3D_Glasses}
+        skeleton={nodes.Wolf3D_Glasses.skeleton}
+      />
+      <skinnedMesh
+        geometry={nodes.Wolf3D_Body.geometry}
+        material={materials.Wolf3D_Body}
+        skeleton={nodes.Wolf3D_Body.skeleton}
+      />
+      <skinnedMesh
+        geometry={nodes.Wolf3D_Outfit_Bottom.geometry}
+        material={materials.Wolf3D_Outfit_Bottom}
+        skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton}
+      />
+      <skinnedMesh
+        geometry={nodes.Wolf3D_Outfit_Footwear.geometry}
+        material={materials.Wolf3D_Outfit_Footwear}
+        skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton}
+      />
+      <skinnedMesh
+        geometry={nodes.Wolf3D_Outfit_Top.geometry}
+        material={materials.Wolf3D_Outfit_Top}
+        skeleton={nodes.Wolf3D_Outfit_Top.skeleton}
+      />
+    </group>
   );
 };
 
-export default ComputersCanvas;
+// Preload model
+useGLTF.preload('/modele/animations/avatar.glb');
+
+export default Developer;

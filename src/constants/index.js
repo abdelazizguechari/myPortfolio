@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'; // Import useTranslation
+
 import {
   mobile,
   backend,
@@ -25,59 +27,63 @@ import {
   threejs,
 } from "../assets";
 
-export const navLinks = [
- 
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Tech",
-  },
+export const navLinks = () => {
+  const { t } = useTranslation(); // Access translation function
+
+  return [
     {
-    id: "project",
-    title: "Project",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
-
- 
-];
-
-const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "Graphic Designer",
-    icon: mobile,
-  },
-  {
-    title: "UI/UX Designer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
-];
+      id: "about",
+      title: t('about'), // Translated value
+    },
+    {
+      id: "work",
+      title: t('tech'),
+    },
+    {
+      id: "project",
+      title: t('project'),
+    },
+    {
+      id: "contact",
+      title: t('contact'),
+    },
+  ];
+};
 
 
-const technologies = [
+export const services = () => {
+  return [
+    {
+      title: 'Web Developer', // Titles are now static, to be translated in the component
+      icon: web, // Example icon path
+    },
+    {
+      title: 'Graphic Designer',
+      icon: mobile,
+    },
+    {
+      title: 'UI/UX Designer',
+      icon: backend,
+    },
+    {
+      title: 'Content Creator',
+      icon: creator,
+    },
+  ];
+};
+
+
+export const technologies = [
   {
-    name: "HTML 5",
+    name: "html", // Translated value
     icon: html,
   },
   {
-    name: "CSS 3",
+    name: "css",
     icon: css,
   },
   {
-    name: "JavaScript",
+    name: "javascript",
     icon: javascript,
   },
   {
@@ -85,19 +91,15 @@ const technologies = [
     icon: typescript,
   },
   {
-    name: "React JS",
+    name: "reactjs",
     icon: reactjs,
   },
   {
-    name: "illustrator",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
+    name: "tailwind",
     icon: tailwind,
   },
   {
-    name: "Node JS",
+    name: "nodejs",
     icon: nodejs,
   },
   {
@@ -105,7 +107,7 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "after effect",
+    name: "afterEffect",
     icon: threejs,
   },
   {
@@ -122,93 +124,13 @@ const technologies = [
   },
 ];
 
-const experiences = [
-  {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
 
-const projects = [
+export const projects = [
+  
   {
     name: "Traveler",
-    description:
-      "A travel agency platform that allows users to explore destinations, book travel packages, and manage their trips seamlessly with curated recommendations and customer support",
+    description: "A travel agency platform that allows users to explore destinations, book travel packages, and manage their trips seamlessly with curated recommendations and customer support", // Translated description
     tags: [
       {
         name: "html",
@@ -228,8 +150,7 @@ const projects = [
   },
   {
     name: "ENTV Park Auto System",
-    description:
-      "A comprehensive management system for ENTV's vehicle fleet, developed to streamline fleet operations and improve efficiency. schedule routine maintenance.The platform also includes notifications",
+    description: "A comprehensive management system for ENTV's vehicle fleet, developed to streamline fleet operations and improve efficiency. schedule routine maintenance.The platform also includes notifications",
     tags: [
       {
         name: "laravel",
@@ -249,8 +170,7 @@ const projects = [
   },
   {
     name: "NBR Airways System",
-    description:
-      "An airline management system for NBR Airways that streamlines flight scheduling, booking management, and customer communication, ensuring an efficient and user-friendly",
+    description: "An airline management system for NBR Airways that streamlines flight scheduling, booking management, and customer communication, ensuring an efficient and user-friendly",
     tags: [
       {
         name: "react",
@@ -268,8 +188,4 @@ const projects = [
     image: tripguide,
     source_code_link: "https://github.com/abdelazizguechari/afor",
   },
-
-  
 ];
-
-export { services, technologies, experiences, testimonials, projects };

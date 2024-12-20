@@ -1,9 +1,18 @@
+import { useEffect } from 'react';
 import { BrowserRouter } from "react-router-dom";
+import { useTranslation } from 'react-i18next'; // Import the useTranslation hook
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works , Footer , StarsCanvas } from "./components";
-
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Footer, StarsCanvas } from "./components";
 
 const App = () => {
+  const { i18n } = useTranslation(); // Access the i18n instance
+
+  // Update the 'dir' attribute when language changes
+  useEffect(() => {
+    const languageDirection = i18n.language === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.setAttribute('dir', languageDirection); // Set the direction of the document
+  }, [i18n.language]); // Run this effect when the language changes
+
   return (
     <BrowserRouter>
       <div className='relative z-0 bg-primary'>

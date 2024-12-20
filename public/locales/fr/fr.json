@@ -1,0 +1,61 @@
+{ "about": "À propos",
+  "tech": "Technologie",
+  "project": "Projets",
+  "contact": "Contact",
+  "Web Developer": "Développeur Web",
+  "graphicDesigner": "Designer Graphique",
+  "uiuxDesigner": "Designer UI/UX",
+  "contentCreator": "Créateur de Contenu",
+  "html": "HTML",
+  "css": "CSS",
+  "javascript": "JavaScript",
+  "bootstrap": "Bootstrap",
+  "reactjs": "React.js",
+  "tailwind": "Tailwind CSS",
+  "nodejs": "Node.js",
+  "mysql": "MySQL",
+  "afterEffect": "After Effects",
+  "git": "Git",
+  "figma": "Figma",
+  "docker": "Docker",
+  "projectDescription": "Une description de projet ici.",
+  
+  "hero": {
+    "greeting": "Bonjour",
+    "description": "Collaborons ensemble"
+  },
+
+  
+  "aboutSection": {
+    "sectionSubText": "À propos de moi",
+    "sectionHeadText": "Comment je peux vous aider",
+    "introText": "Je suis un développeur web et designer graphique dédié, avec une expertise dans les outils et frameworks modernes, y compris Laravel, React, After Effects, Figma, Illustrator et Photoshop. Je me spécialise dans la création de designs visuellement frappants et dans la construction d'applications web évolutives et conviviales. Avec un accent sur la collaboration et l'innovation, je transforme des idées créatives en solutions fonctionnelles et percutantes. Travaillons ensemble pour donner vie à votre vision !"
+  },
+
+
+
+  "work": {
+    "sectionSubText": "Quelle technologie j'utilise",
+    "sectionHeadText": "Technologies que j'utilise"
+  },
+
+  "projectsSection": {
+    "sectionSubText": "Mon travail",
+    "sectionHeadText": "Projets.",
+    "introText": "Les projets suivants présentent mes compétences et mon expérience à travers des exemples réels de mon travail. Chaque projet est brièvement décrit avec des liens vers les dépôts de code et les démonstrations en direct. Cela reflète ma capacité à résoudre des problèmes complexes, à travailler avec différentes technologies et à gérer efficacement des projets."
+  },
+
+  "contactSection": {
+    "sectionSubText": "Prenons contact",
+    "sectionHeadText": "Contact.",
+    "nameLabel": "Votre nom",
+    "emailLabel": "Votre email",
+    "messageLabel": "Votre message",
+    "namePlaceholder": "Quel est votre joli nom ?",
+    "emailPlaceholder": "Quelle est votre adresse web ?",
+    "messagePlaceholder": "Que voulez-vous dire ?",
+    "sendingButton": "Envoi...",
+    "sendButton": "Envoyer",
+    "successMessage": "Merci. Je reviendrai vers vous dès que possible.",
+    "errorMessage": "Ahh, quelque chose a mal tourné. Veuillez réessayer." }
+}

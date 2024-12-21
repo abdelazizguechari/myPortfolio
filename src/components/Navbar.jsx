@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next"; // Import useTranslation hook
 import { styles } from "../styles";
 import { navLinks } from "../constants"; // Import the navLinks function
@@ -11,8 +11,8 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { t, i18n } = useTranslation(); // Hook for translation
-
   const [languageToggle, setLanguageToggle] = useState(false); // State for toggling language dropdown
+  const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,9 +29,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Function to change language
+  // Function to change language and navigate to the language path
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
+    navigate(`/${lang}`); // Navigate to the corresponding language path
     setLanguageToggle(false); // Close the dropdown after selecting a language
   };
 

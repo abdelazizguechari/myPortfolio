@@ -2,7 +2,6 @@
   "name": "3dfolio",
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://your-vercel-url/3dfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -1,0 +1,61 @@
+{
+  "about": "حول",
+  "tech": "تقنية",
+  "project": "مشاريعي",
+  "contact": "اتصال",
+  "projectDescription": "هذه وصف المشروع.",
+  "reactjsDeveloper": "مطور ريأكت جي إس",
+  "reactNativeDeveloper": "مطور ريأكت نيتيف",
+  "fullStackDeveloper": "مطور فول ستاك",
+
+   "hero": {
+    "greeting": "مرحبا",
+    "description": "لنعمل معا"
+  },
+
+  "aboutSection": {
+  "sectionSubText": "عنّي",
+  "sectionHeadText": "كيف يمكنني المساعدة",
+  "introText": "أنا مطور ويب ومصمم جرافيك مخلص مع خبرة في الأدوات والإطارات الحديثة، بما في ذلك Laravel و React و After Effects و Figma و Illustrator و Photoshop. أختص في إنشاء تصاميم بصرية لافتة وبناء تطبيقات ويب قابلة للتوسع وسهلة الاستخدام. مع التركيز على التعاون والابتكار، أحول الأفكار الإبداعية إلى حلول عملية وفعالة. دعنا نعمل معًا لتحويل رؤيتك إلى واقع!"
+
+},
+
+
+"work": {
+  "sectionSubText": "ما هي التكنولوجيا التي أستخدمها",
+  "sectionHeadText": "التقنيات التي أستخدمها"
+},
+
+  "Web Developer": "مطور ويب",  
+  "Graphic Designer": "مصمم جرافيك",
+  "UI/UX Designer": "مصمم واجهة المستخدم وتجربة المستخدم",
+  "Content Creator": "صانع المحتوى",
+
+
+
+  "projectsSection": {
+    "sectionSubText": "عملي",
+    "sectionHeadText": "المشاريع",
+    "introText": "المشاريع التالية تعرض مهاراتي وخبرتي من خلال أمثلة حقيقية من عملي. يتم وصف كل مشروع باختصار مع روابط إلى مستودعات الكود والعروض المباشرة. هذا يعكس قدرتي على حل المشكلات المعقدة والعمل مع تقنيات مختلفة وإدارة المشاريع بفعالية."
+  },
+
+  "contactSection": {
+    "sectionSubText": "دعونا نتواصل",
+    "sectionHeadText": "التواصل",
+    "nameLabel": "اسمك",
+    "emailLabel": "بريدك الإلكتروني",
+    "messageLabel": "رسالتك",
+    "namePlaceholder": "ما هو اسمك الجميل؟",
+    "emailPlaceholder": "ما هو عنوانك الإلكتروني؟",
+    "messagePlaceholder": "ماذا تريد أن تقول؟",
+    "sendingButton": "جاري الإرسال...",
+    "sendButton": "إرسال",
+    "successMessage": "شكراً. سأعود إليك في أقرب وقت ممكن.",
+    "errorMessage": "أوه، حدث خطأ ما. يرجى المحاولة مرة أخرى."
+  }
+
+
+
+
+}
+ 

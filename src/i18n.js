@@ -2,9 +2,9 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 // Import translations for each language
-import ar from '../public/locales/ar/arb.json';
-import en from '../public/locales/en/en.json'; // English translations
-import fr from '../public/locales/fr/fr.json'; // French translations
+import ar from './locales/ar/arb.json';
+import en from './locales/en/en.json'; // English translations
+import fr from './locales/fr/fr.json'; // French translations
 
 // Check if the language is saved in localStorage
 const savedLanguage = localStorage.getItem('language') || 'en'; // Default to 'en' if no saved language

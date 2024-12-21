@@ -5,18 +5,24 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   build: {
-    // Increase chunk size limit to suppress warning if needed
     chunkSizeWarningLimit: 1000, // Increase the limit to 1MB (default is 500KB)
     rollupOptions: {
       output: {
-        // Manually split chunks based on certain conditions
         manualChunks(id) {
-          // Place libraries from node_modules into a separate 'vendor' chunk
           if (id.includes('node_modules')) {
-            return 'vendor';
+            return 'vendor'; // Place libraries from node_modules into a separate 'vendor' chunk
           }
         },
       },
     },
   },
+  server: {
+    host: true, // This ensures Vite listens on all interfaces for local development
+  },
+  optimizeDeps: {
+    // This is helpful if you are using dynamic imports and want Vite to pre-bundle dependencies
+    include: ['react', 'react-dom'],
+  },
+  // Configure base URL for Vercel deployment
+  base: process.env.NODE_ENV === 'production' ? '/your-app-name/' : '/',
 });

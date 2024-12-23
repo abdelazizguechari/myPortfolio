@@ -39,11 +39,6 @@
     "sectionHeadText": "Technologies que j'utilise"
   },
 
-  "projectsSection": {
-    "sectionSubText": "Mon travail",
-    "sectionHeadText": "Projets.",
-    "introText": "Les projets suivants présentent mes compétences et mon expérience à travers des exemples réels de mon travail. Chaque projet est brièvement décrit avec des liens vers les dépôts de code et les démonstrations en direct. Cela reflète ma capacité à résoudre des problèmes complexes, à travailler avec différentes technologies et à gérer efficacement des projets."
-  },
 
   "contactSection": {
     "sectionSubText": "Prenons contact",
@@ -57,5 +52,43 @@
     "sendingButton": "Envoi...",
     "sendButton": "Envoyer",
     "successMessage": "Merci. Je reviendrai vers vous dès que possible.",
-    "errorMessage": "Ahh, quelque chose a mal tourné. Veuillez réessayer." }
+    "errorMessage": "Ahh, quelque chose a mal tourné. Veuillez réessayer." },
+
+
+
+
+"projects": {
+    "Traveler": {
+      "name": "Voyageur",
+      "description": "Une plateforme d'agence de voyage qui permet aux utilisateurs d'explorer des destinations, de réserver des forfaits voyage et de gérer leurs voyages facilement avec des recommandations personnalisées et un support client."
+    },
+    "ENTV Park Auto System": {
+      "name": "Système de gestion de parc ENTV",
+      "description": "Un système de gestion complet pour la flotte de véhicules d'ENTV, conçu pour optimiser les opérations de flotte et améliorer l'efficacité. Planifiez l'entretien régulier. La plateforme inclut également des notifications."
+    },
+    "NBR Airways System": {
+      "name": "Système de gestion des vols NBR",
+      "description": "Un système de gestion pour NBR Airways qui rationalise la planification des vols, la gestion des réservations et la communication avec les clients, garantissant une expérience efficace et conviviale."
+    }
+  },
+  "tags": {
+    "html": "HTML",
+    "css": "CSS",
+    "mysql": "MySQL",
+    "laravel": "Laravel",
+    "scss": "SCSS",
+    "nodejs": "Node.js",
+    "react": "React",
+    "tailwand": "Tailwind",
+    "inertia": "Inertia"
+  },
+  "projectsSection": {
+    "sectionSubText": "Mes Travaux",
+    "sectionHeadText": "Projets",
+    "introText": "Voici quelques projets sur lesquels j'ai travaillé. Ils montrent mes compétences et ma passion pour le développement."
+    
+  }
+  
 }
+
+

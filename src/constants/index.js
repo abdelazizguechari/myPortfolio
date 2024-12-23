@@ -25,15 +25,22 @@ import {
   jobit,
   tripguide,
   threejs,
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
 } from "../assets";
 
+// Same pattern as other constants
+
 export const navLinks = () => {
-  const { t } = useTranslation(); // Access translation function
+  const { t } = useTranslation();
 
   return [
     {
       id: "about",
-      title: t('about'), // Translated value
+      title: t('about'),
     },
     {
       id: "work",
@@ -50,12 +57,11 @@ export const navLinks = () => {
   ];
 };
 
-
 export const services = () => {
   return [
     {
-      title: 'Web Developer', // Titles are now static, to be translated in the component
-      icon: web, // Example icon path
+      title: 'Web Developer',
+      icon: web,
     },
     {
       title: 'Graphic Designer',
@@ -72,10 +78,9 @@ export const services = () => {
   ];
 };
 
-
 export const technologies = [
   {
-    name: "html", // Translated value
+    name: "html",
     icon: html,
   },
   {
@@ -124,68 +129,74 @@ export const technologies = [
   },
 ];
 
+export const projects = () => {
+  return [
+    {
+      name: "Traveler",
+      description: "A travel agency platform that lets users explore destinations...",
+      tags: [
+        { name: "html", color: "blue-text-gradient" },
+        { name: "css", color: "green-text-gradient" },
+        { name: "mysql", color: "pink-text-gradient" },
+      ],
+      image: carrent,
+      source_code_link: "https://github.com/abdelazizguechari/travel-agance",
+    },
+    {
+      name: "ENTV Park Auto System",
+      description: "A comprehensive vehicle fleet management system for ENTV...",
+      tags: [
+        { name: "laravel", color: "blue-text-gradient" },
+        { name: "scss", color: "green-text-gradient" },
+        { name: "nodejs", color: "pink-text-gradient" },
+      ],
+      image: jobit,
+      source_code_link: "https://github.com/abdelazizguechari/entv-auto",
+    },
+    {
+      name: "NBR Airways System",
+      description: "A flight management system for NBR Airways...",
+      tags: [
+        { name: "react", color: "blue-text-gradient" },
+        { name: "tailwand", color: "green-text-gradient" },
+        { name: "inertia", color: "pink-text-gradient" },
+      ],
+      image: tripguide,
+      source_code_link: "https://github.com/abdelazizguechari/afor",
+    },
+  ];
+};
 
-
-export const projects = [
-  
+// Make galleryImages a constant array instead of a function
+export const galleryImages = [
   {
-    name: "Traveler",
-    description: "A travel agency platform that allows users to explore destinations, book travel packages, and manage their trips seamlessly with curated recommendations and customer support", // Translated description
-    tags: [
-      {
-        name: "html",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "css",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mysql",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/abdelazizguechari/travel-agance",
+    src: image1,
+    alt: 'Gallery Item 1',
+    title: 'Gallery Item 1',
+    description: 'Description for item 1',
   },
   {
-    name: "ENTV Park Auto System",
-    description: "A comprehensive management system for ENTV's vehicle fleet, developed to streamline fleet operations and improve efficiency. schedule routine maintenance.The platform also includes notifications",
-    tags: [
-      {
-        name: "laravel",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "green-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/abdelazizguechari/entv-auto",
+    src: image2,
+    alt: 'Gallery Item 2',
+    title: 'Gallery Item 2',
+    description: 'Description for item 2',
   },
   {
-    name: "NBR Airways System",
-    description: "An airline management system for NBR Airways that streamlines flight scheduling, booking management, and customer communication, ensuring an efficient and user-friendly",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwand",
-        color: "green-text-gradient",
-      },
-      {
-        name: "inertia",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/abdelazizguechari/afor",
+    src: image3,
+    alt: 'Gallery Item 3',
+    title: 'Gallery Item 3',
+    description: 'Description for item 3',
+  },
+  {
+    src: image4,
+    alt: 'Gallery Item 4',
+    title: 'Gallery Item 4',
+    description: 'Description for item 4',
+  },
+  {
+    src: image5,
+    alt: 'Gallery Item 5',
+    title: 'Gallery Item 5',
+    description: 'Description for item 5',
   },
 ];

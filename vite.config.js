@@ -15,14 +15,17 @@ export default defineConfig({
         },
       },
     },
+    // Ensure output directory for Vercel
+    outDir: 'dist', // The default output directory is 'dist' for static deployment
   },
   server: {
     host: true, // This ensures Vite listens on all interfaces for local development
+    port: 3000, // You can customize the development server port
   },
   optimizeDeps: {
-    // This is helpful if you are using dynamic imports and want Vite to pre-bundle dependencies
-    include: ['react', 'react-dom'],
+    include: ['react', 'react-dom'], // Pre-bundle React and ReactDOM if using dynamic imports
   },
   // Configure base URL for Vercel deployment
-  base: process.env.NODE_ENV === 'production' ? '/your-app-name/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/3dfolio/' : '/', // Adjust the base path for Vercel
 });
+

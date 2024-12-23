@@ -30,6 +30,13 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+// Gallery images imports
+import image1 from "./image1.png";
+import image2 from "./image2.png";
+import image3 from "./image3.png";
+import image4 from "./image4.png";
+import image5 from "./image5.png";
+
 export {
   logo,
   backend,
@@ -59,4 +66,9 @@ export {
   carrent,
   jobit,
   tripguide,
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,  // Exporting gallery images with PNG format
 };

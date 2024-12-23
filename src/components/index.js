@@ -3,7 +3,8 @@ import Hero from "./Hero";
 import Navbar from "./Navbar";
 import About from "./About";
 import Tech from "./Tech";
-import Footer from "./footer";
+import Footer from "./footer"
+import Gallery from "./Gallery";
 import Experience from "./Experience";
 import Works from "./Works";
 import Feedbacks from "./Feedbacks";
@@ -20,6 +21,7 @@ export {
   Tech,
   Experience,
   Works,
+  Gallery,
   Feedbacks,
   Contact,
   Footer,

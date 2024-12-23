@@ -8,36 +8,26 @@
   "reactNativeDeveloper": "مطور ريأكت نيتيف",
   "fullStackDeveloper": "مطور فول ستاك",
 
-   "hero": {
+  "hero": {
     "greeting": "مرحبا",
     "description": "لنعمل معا"
   },
 
   "aboutSection": {
-  "sectionSubText": "عنّي",
-  "sectionHeadText": "كيف يمكنني المساعدة",
-  "introText": "أنا مطور ويب ومصمم جرافيك مخلص مع خبرة في الأدوات والإطارات الحديثة، بما في ذلك Laravel و React و After Effects و Figma و Illustrator و Photoshop. أختص في إنشاء تصاميم بصرية لافتة وبناء تطبيقات ويب قابلة للتوسع وسهلة الاستخدام. مع التركيز على التعاون والابتكار، أحول الأفكار الإبداعية إلى حلول عملية وفعالة. دعنا نعمل معًا لتحويل رؤيتك إلى واقع!"
+    "sectionSubText": "عنّي",
+    "sectionHeadText": "كيف يمكنني المساعدة",
+    "introText": "أنا مطور ويب ومصمم جرافيك مخلص مع خبرة في الأدوات والإطارات الحديثة، بما في ذلك Laravel و React و After Effects و Figma و Illustrator و Photoshop. أختص في إنشاء تصاميم بصرية لافتة وبناء تطبيقات ويب قابلة للتوسع وسهلة الاستخدام. مع التركيز على التعاون والابتكار، أحول الأفكار الإبداعية إلى حلول عملية وفعالة. دعنا نعمل معًا لتحويل رؤيتك إلى واقع!"
+  },
 
-},
+  "work": {
+    "sectionSubText": "ما هي التكنولوجيا التي أستخدمها",
+    "sectionHeadText": "التقنيات التي أستخدمها"
+  },
 
-
-"work": {
-  "sectionSubText": "ما هي التكنولوجيا التي أستخدمها",
-  "sectionHeadText": "التقنيات التي أستخدمها"
-},
-
-  "Web Developer": "مطور ويب",  
+  "Web Developer": "مطور ويب",
   "Graphic Designer": "مصمم جرافيك",
   "UI/UX Designer": "مصمم واجهة المستخدم وتجربة المستخدم",
   "Content Creator": "صانع المحتوى",
-
-
-
-  "projectsSection": {
-    "sectionSubText": "عملي",
-    "sectionHeadText": "المشاريع",
-    "introText": "المشاريع التالية تعرض مهاراتي وخبرتي من خلال أمثلة حقيقية من عملي. يتم وصف كل مشروع باختصار مع روابط إلى مستودعات الكود والعروض المباشرة. هذا يعكس قدرتي على حل المشكلات المعقدة والعمل مع تقنيات مختلفة وإدارة المشاريع بفعالية."
-  },
 
   "contactSection": {
     "sectionSubText": "دعونا نتواصل",
@@ -52,10 +42,38 @@
     "sendButton": "إرسال",
     "successMessage": "شكراً. سأعود إليك في أقرب وقت ممكن.",
     "errorMessage": "أوه، حدث خطأ ما. يرجى المحاولة مرة أخرى."
+  },
+
+  "projects": {
+    "Traveler": {
+      "name": "مسافر",
+      "description": "منصة وكالة سفر تتيح للمستخدمين استكشاف الوجهات..."
+    },
+    "ENTV Park Auto System": {
+      "name": "نظام حديقة ENTV للسيارات",
+      "description": "نظام شامل لإدارة أسطول المركبات في ENTV..."
+    },
+    "NBR Airways System": {
+      "name": "نظام NBR للطيران",
+      "description": "نظام إدارة الطيران لشركة NBR للطيران..."
+    }
+  },
+
+  "tags": {
+    "html": "HTML",
+    "css": "CSS",
+    "mysql": "MySQL",
+    "laravel": "لارافيل",
+    "scss": "SCSS",
+    "nodejs": "Node.js",
+    "react": "ريأكت",
+    "tailwand": "تايلويند",
+    "inertia": "إنرتيا"
+  },
+
+  "projectsSection": {
+    "sectionSubText": "بعض المشاريع",
+    "sectionHeadText": "مشاريعي",
+    "introText": "إليك بعض من مشروعاتنا..."
   }
-
-
-
-
 }
- 

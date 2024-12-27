@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   build: {
-    chunkSizeWarningLimit: 1000, // Increase the limit to 1MB (default is 500KB)
+    chunkSizeWarningLimit: 1000, // Increase the warning limit to 1MB to prevent warnings for large libraries
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -15,17 +15,15 @@ export default defineConfig({
         },
       },
     },
-    // Ensure output directory for Vercel
-    outDir: 'dist', // The default output directory is 'dist' for static deployment
+    outDir: 'dist', // Default output directory for Vercel static builds
   },
   server: {
-    host: true, // This ensures Vite listens on all interfaces for local development
-    port: 3000, // You can customize the development server port
+    host: true, // Ensure Vite listens on all interfaces for local development
+    port: 3000, // You can set this to any desired port for local development
   },
   optimizeDeps: {
-    include: ['react', 'react-dom'], // Pre-bundle React and ReactDOM if using dynamic imports
+    include: ['react', 'react-dom'], // Pre-bundle React and ReactDOM for faster HMR
   },
-  // Configure base URL for Vercel deployment
-  base: process.env.NODE_ENV === 'production' ? '/3dfolio/' : '/', // Adjust the base path for Vercel
+  // Configure base URL for production and development
+  base: process.env.NODE_ENV === 'production' ? '/3dfolio/' : '/', // Use '/3dfolio/' for production and '/' for development
 });
-

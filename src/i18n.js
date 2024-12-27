@@ -9,10 +9,11 @@ import fr from './locales/fr/fr.json'; // French translations
 // Supported languages
 const supportedLanguages = ['en', 'fr', 'ar'];
 
-// Check if the language is saved in localStorage and is supported, otherwise default to 'en'
+// Get saved language from localStorage, or default to 'en' if not found or not supported
 const savedLanguage = localStorage.getItem('language');
 const initialLanguage = supportedLanguages.includes(savedLanguage) ? savedLanguage : 'en';
 
+// Initialize i18n
 i18n
   .use(initReactI18next)
   .init({
@@ -24,14 +25,14 @@ i18n
     lng: initialLanguage, // Set the initial language based on localStorage or default
     fallbackLng: 'en', // Fallback language if the selected language is unavailable
     interpolation: {
-      escapeValue: false, // Not needed for React
+      escapeValue: false, // Not needed for React, as React escapes values by default
     },
     react: {
       useSuspense: false, // Avoid suspending the app while loading translations
     },
   });
 
-// Listen for language change and save to localStorage
+// Listen for language change and update localStorage
 i18n.on('languageChanged', (lng) => {
   localStorage.setItem('language', lng); // Save the selected language to localStorage
 });

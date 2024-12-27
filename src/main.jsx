@@ -10,21 +10,18 @@ function Root() {
 
   useEffect(() => {
     // Ensure that i18n is initialized
-    const checkI18nInitialization = async () => {
-      if (i18n.isInitialized) {
-        setIsLoading(false);
-      } else {
-        // Wait for i18n initialization
-        await i18n.init();
-        setIsLoading(false);
+    const initializeI18n = async () => {
+      if (!i18n.isInitialized) {
+        await i18n.init(); // Wait for initialization
       }
+      setIsLoading(false); // Set loading state to false after initialization
     };
 
-    checkI18nInitialization();
-  }, []);
+    initializeI18n(); // Trigger i18n initialization
+  }, []); // Empty dependency array ensures this runs once
 
   if (isLoading) {
-    return <div>Loading translations...</div>;
+    return <div>Loading translations...</div>; // Show loading state while translations load
   }
 
   return (

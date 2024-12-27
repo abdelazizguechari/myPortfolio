@@ -30,7 +30,7 @@ import {
   image3,
   image4,
   image5,
-} from "../assets";
+} from "../assets/index.js";
 
 // Same pattern as other constants
 

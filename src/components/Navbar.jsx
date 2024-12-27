@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next"; // Import useTranslation hook
-import { styles } from "../styles";
+import { styles } from "../styles.js";
 import { navLinks } from "../constants"; // Import the navLinks function
 import { logo, menu, close } from "../assets";
 import { FaGlobe } from 'react-icons/fa'; // Import the globe icon from react-icons

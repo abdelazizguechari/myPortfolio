@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 import { BrowserRouter } from "react-router-dom";
 import { useTranslation } from 'react-i18next'; // Import the useTranslation hook
 
-import { About, Contact, Experience, Feedbacks, Hero, Gallery , Navbar, Tech, Works, Footer, StarsCanvas } from "./components";
+import { About, Contact, Experience, Feedbacks, Hero, Gallery, Navbar, Tech, Works, Footer } from "./components";
+import { StarsCanvas } from "./components/canvas";
 
 const App = () => {
   const { i18n } = useTranslation(); // Access the i18n instance

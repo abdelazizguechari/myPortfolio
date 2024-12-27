@@ -16,7 +16,8 @@ export default defineConfig({
       },
     },
     // Ensure output directory for Vercel
-    outDir: 'dist', // The default output directory is 'dist' for static deployment
+    outDir: 'dist', // The output directory is 'dist' for static deployment
+    emptyOutDir: true, // Clears the 'dist' folder before each build
   },
   server: {
     host: true, // This ensures Vite listens on all interfaces for local development
@@ -25,9 +26,6 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom'], // Pre-bundle React and ReactDOM if using dynamic imports
   },
-  // Configure base URL for Vercel deployment to handle multiple languages
-  base: process.env.NODE_ENV === 'production' ? '/3dfolio/' : '/', // Adjust the base path for Vercel
-  
-  // Handle multi-language routing in the app (adjust if needed for your path structure)
-  publicDir: 'public',
+  // Configure base URL for Vercel deployment
+  base: '/', // Use '/' if deploying to the root of the domain, not a subpath like '/3dfolio/'
 });

@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next'; // Import useTranslation
 import { ComputersCanvas } from "./canvas";
 import { styles } from "../styles";
 import { Suspense, useState } from 'react';
@@ -8,7 +7,6 @@ import CanvasLoader from '../components/canvas/Loading.jsx';
 import Computers from '../components/canvas/Computers.jsx';  // Ensure the correct component is imported
 
 const Hero = () => {
-  const { t, i18n } = useTranslation(); // Access translation function
   const [animationName, setAnimationName] = useState('idle'); // Default animation set to 'idle'
 
   // Function to handle click and change animation to 'salute'
@@ -26,9 +24,6 @@ const Hero = () => {
     setAnimationName('idle');
   };
 
-
-
-
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       {/* Text Section */}
@@ -36,14 +31,14 @@ const Hero = () => {
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col '} gap-5 z-10 pointer-events-none`}
       >
         <div>
-          {/* Header without animation */}
+          {/* Header with static text */}
           <h1 className={`${styles.heroHeadText} text-white`}>
-            {t('hero.greeting')} <span className="text-[#e0e0e0]"></span>
+            Hello, ! <span className="text-[#e0e0e0]"></span>
           </h1>
 
-          {/* Subtext without animation */}
+          {/* Subtext with static text */}
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            {t('hero.description')}
+       let work toghther
           </p>
         </div>
       </div>

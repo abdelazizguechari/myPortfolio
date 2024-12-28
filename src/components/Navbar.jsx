@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next"; // Import useTranslation hook
+import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants"; // Import the navLinks function
 import { logo, menu, close } from "../assets";
-import { FaGlobe } from 'react-icons/fa'; // Import the globe icon from react-icons
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { t, i18n } = useTranslation(); // Hook for translation
-  const [languageToggle, setLanguageToggle] = useState(false); // State for toggling language dropdown
-  const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,13 +23,6 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Function to change language and navigate to the language path
-  const handleLanguageChange = (lang) => {
-    i18n.changeLanguage(lang);
-    navigate(`/${lang}`); // Navigate to the corresponding language path
-    setLanguageToggle(false); // Close the dropdown after selecting a language
-  };
 
   // Call navLinks() to get the array of navigation items
   const links = navLinks();
@@ -69,44 +57,9 @@ const Navbar = () => {
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
                 onClick={() => setActive(nav.title)}
               >
-                <a href={`#${nav.id}`}>{t(nav.title)}</a> {/* Use translation here */}
+                <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
-
-          {/* Language dropdown */}
-          <div className="relative top-[-4px]">
-            <button
-              className="text-white px-4 py-2 font-medium flex items-center gap-2"
-              onClick={() => setLanguageToggle(!languageToggle)} // Toggle language menu
-            >
-              <FaGlobe className="text-xl" /> {/* Globe Icon */}
-            </button>
-
-            {languageToggle && (
-              <div className="absolute top-10 right-0 bg-white p-2 rounded-lg shadow-lg">
-                <ul className="list-none">
-                  <li
-                    onClick={() => handleLanguageChange('en')}
-                    className="cursor-pointer text-black py-1 px-2 hover:bg-gray-200"
-                  >
-                    English
-                  </li>
-                  <li
-                    onClick={() => handleLanguageChange('fr')}
-                    className="cursor-pointer text-black py-1 px-2 hover:bg-gray-200"
-                  >
-                    Français
-                  </li>
-                  <li
-                    onClick={() => handleLanguageChange('ar')}
-                    className="cursor-pointer text-black py-1 px-2 hover:bg-gray-200"
-                  >
-                    العربية
-                  </li>
-                </ul>
-              </div>
-            )}
-          </div>
         </ul>
 
         {/* Mobile Menu */}
@@ -136,7 +89,7 @@ const Navbar = () => {
                       setActive(nav.title);
                     }}
                   >
-                    <a href={`#${nav.id}`}>{t(nav.title)}</a>
+                    <a href={`#${nav.id}`}>{nav.title}</a>
                   </li>
                 ))}
             </ul>

@@ -1,3 +1,6 @@
+/*
+
+
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import ar from './locales/ar/arb.json';
@@ -27,3 +30,7 @@ i18n.on('languageChanged', (lng) => {
 });
 
 export default i18n;
+
+
+
+*/

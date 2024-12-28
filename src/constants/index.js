@@ -1,5 +1,3 @@
-import { useTranslation } from 'react-i18next'; // Import useTranslation
-
 import {
   mobile,
   backend,
@@ -35,24 +33,22 @@ import {
 // Same pattern as other constants
 
 export const navLinks = () => {
-  const { t } = useTranslation();
-
   return [
     {
       id: "about",
-      title: t('about'),
+      title: 'About',  // Directly use the title without translation
     },
     {
       id: "work",
-      title: t('tech'),
+      title: 'Tech',
     },
     {
       id: "project",
-      title: t('project'),
+      title: 'Project',
     },
     {
       id: "contact",
-      title: t('contact'),
+      title: 'Contact',
     },
   ];
 };

@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   VerticalTimeline,
@@ -11,19 +10,16 @@ import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 const Experience = () => {
-  const { t } = useTranslation(); // Initialize translation function
-
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-          {t('work.sectionSubText')}  {/* Use translated text */}
+          Technologies  {/* Static text */}
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          {t('work.sectionHeadText')}  {/* Use translated text */}
+         Technologies I Use {/* Static text */}
         </h2>
       </motion.div>
     </>

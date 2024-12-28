@@ -1,20 +1,33 @@
 {
   "routes": [
     {
-      "src": "/en/(.*)",
-      "dest": "/$1"
+      "src": "/(en|fr|ar)/(.*)", 
+      "dest": "/$2" 
     },
     {
-      "src": "/fr/(.*)",
-      "dest": "/$1"
+      "src": "/(en|fr|ar)", 
+      "dest": "/" 
     },
     {
-      "src": "/ar/(.*)",
-      "dest": "/$1"
-    },
+      "src": "/(.*)", 
+      "dest": "/" 
+    }
+  ],
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/"
+      "source": "/static/(.*)", 
+      "destination": "/static/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     }
   ]
 }

@@ -1,32 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
-import App from './App'; // Import your App component
-import i18n from './i18n'; // Import the i18n instance
-import { I18nextProvider } from 'react-i18next'; // Import I18nextProvider
+import App from './App';
+import i18n from './i18n';
+import { I18nextProvider } from 'react-i18next';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import "./index.css";
 
+function LanguageHandler() {
+  const location = useLocation();
+  const currentLang = location.pathname.split('/')[1] || 'en';
+
+  React.useEffect(() => {
+    if (i18n.language !== currentLang) {
+      i18n.changeLanguage(currentLang);
+    }
+  }, [currentLang]);
+
+  return null;
+}
+
 function Root() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Ensure that i18n is initialized
-    const initializeI18n = async () => {
-      if (!i18n.isInitialized) {
-        await i18n.init(); // Wait for initialization
-      }
-      setIsLoading(false); // Set loading state to false after initialization
-    };
-
-    initializeI18n(); // Trigger i18n initialization
-  }, []); // Empty dependency array ensures this runs once
-
-  if (isLoading) {
-    return <div>Loading translations...</div>; // Show loading state while translations load
-  }
-
   return (
     <I18nextProvider i18n={i18n}>
-      <App />
+      <BrowserRouter>
+        <LanguageHandler />
+        <Routes>
+          <Route path="/:lang/*" element={<App />} />
+          <Route path="*" element={<Navigate to="/en" replace />} />
+        </Routes>
+      </BrowserRouter>
     </I18nextProvider>
   );
 }

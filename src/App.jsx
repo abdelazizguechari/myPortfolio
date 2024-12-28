@@ -1,36 +1,33 @@
-import { useEffect } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { useTranslation } from 'react-i18next'; // Import the useTranslation hook
+import { useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { About, Contact, Experience, Feedbacks, Hero, Gallery, Navbar, Tech, Works, Footer, StarsCanvas } from './components';
 
 const App = () => {
-  const { i18n } = useTranslation(); // Access the i18n instance
+  const { i18n } = useTranslation();
 
-  // Update the 'dir' attribute when language changes
   useEffect(() => {
-    const languageDirection = i18n.language === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.setAttribute('dir', languageDirection); // Set the direction of the document
-  }, [i18n.language]); // Run this effect when the language changes
+    const languageDirection = i18n.language === "ar" ? "rtl" : "ltr";
+    document.documentElement.setAttribute("dir", languageDirection);
+  }, [i18n.language]);
 
   return (
-    <BrowserRouter basename="/3dfolio"> {/* Make sure the base path reflects your Vercel deployment */}
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <div className='relative z-0'>
-          <Contact />
-          <StarsCanvas />
-          <Footer />
-        </div>
+    <div className="relative z-0 bg-primary">
+      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <Navbar />
+        <Hero />
       </div>
-    </BrowserRouter>
+      <About />
+      <Experience />
+      <Tech />
+      <Works />
+      <div className="relative z-0">
+        <Contact />
+        <StarsCanvas />
+        <Footer />
+      </div>
+    </div>
   );
 };
 

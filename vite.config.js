@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,22 +11,37 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            return 'vendor'; // Place libraries from node_modules into a separate 'vendor' chunk
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor'; // Separate React and ReactDOM into their own chunk
+            }
+            if (id.includes('i18next')) {
+              return 'i18n-vendor'; // Separate i18next and translation-related libraries
+            }
+            return 'vendor'; // Default chunk for other node_modules
           }
         },
       },
     },
-    // Ensure output directory for Vercel
-    outDir: 'dist', // The output directory is 'dist' for static deployment
-    emptyOutDir: true, // Clears the 'dist' folder before each build
+    outDir: 'dist', // Output directory for static deployment
+    emptyOutDir: true, // Clears the output folder before each build
   },
   server: {
-    host: true, // This ensures Vite listens on all interfaces for local development
-    port: 3000, // You can customize the development server port
+    host: true, // Ensures Vite listens on all interfaces for local development
+    port: 3000, // Customize the development server port
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'), // Shorten imports for cleaner paths
+    },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom'], // Pre-bundle React and ReactDOM if using dynamic imports
+    include: [
+      'react', 
+      'react-dom', 
+      'react-router-dom', 
+      'i18next', 
+      'react-i18next', 
+    ], // Pre-bundle frequently used libraries
   },
-  // Configure base URL for Vercel deployment
-  base: '/', // Use '/' if deploying to the root of the domain, not a subpath like '/3dfolio/'
+  base: '/', // Use '/' if deploying to the root domain, not a subpath like '/project/'
 });

@@ -37,5 +37,5 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom', 'i18next', 'react-i18next'], // Pre-bundle frequently used libraries
   },
-  base: '/en/', // Base URL for production deployment (use '/' if deploying to the root domain)
+  base: '/', // Base URL for production deployment (use '/' if deploying to the root domain)
 });

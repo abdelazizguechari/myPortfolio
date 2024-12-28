@@ -7,12 +7,6 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "builds": [
-    {
-      "src": "dist/**",
-      "use": "@vercel/static"
-    }
-  ],
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@react-hook/intersection-observer": "^3.1.2",
@@ -46,5 +40,6 @@
     "sass": "^1.83.0",
     "tailwindcss": "^3.2.6",
     "vite": "^4.5.5"
-  }
+  },
+  "homepage": "https://azgru.vercel.app/"
 }

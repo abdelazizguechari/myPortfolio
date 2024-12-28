@@ -37,7 +37,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/az_gu/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               Instagram
             </a>
-            <a href="https://www.linkedin.com/in/abdelaziz-guechari-370877251/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
+            <a href="https://www.linkedin.com/in/abdelaziz-guechari-web-developer-graphic-designer-370877251/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               LinkedIn
             </a>
           </div>

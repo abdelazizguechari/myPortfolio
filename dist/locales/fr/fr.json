@@ -1,0 +1,94 @@
+{ "about": "À propos",
+  "tech": "Technologie",
+  "project": "Projets",
+  "contact": "Contact",
+  "Web Developer": "Développeur Web",
+  "graphicDesigner": "Designer Graphique",
+  "uiuxDesigner": "Designer UI/UX",
+  "contentCreator": "Créateur de Contenu",
+  "html": "HTML",
+  "css": "CSS",
+  "javascript": "JavaScript",
+  "bootstrap": "Bootstrap",
+  "reactjs": "React.js",
+  "tailwind": "Tailwind CSS",
+  "nodejs": "Node.js",
+  "mysql": "MySQL",
+  "afterEffect": "After Effects",
+  "git": "Git",
+  "figma": "Figma",
+  "docker": "Docker",
+  "projectDescription": "Une description de projet ici.",
+  
+  "hero": {
+    "greeting": "Bonjour",
+    "description": "Collaborons ensemble"
+  },
+
+  
+  "aboutSection": {
+    "sectionSubText": "À propos de moi",
+    "sectionHeadText": "Comment je peux vous aider",
+    "introText": "Je suis un développeur web et designer graphique dédié, avec une expertise dans les outils et frameworks modernes, y compris Laravel, React, After Effects, Figma, Illustrator et Photoshop. Je me spécialise dans la création de designs visuellement frappants et dans la construction d'applications web évolutives et conviviales. Avec un accent sur la collaboration et l'innovation, je transforme des idées créatives en solutions fonctionnelles et percutantes. Travaillons ensemble pour donner vie à votre vision !"
+  },
+
+
+
+  "work": {
+    "sectionSubText": "Quelle technologie j'utilise",
+    "sectionHeadText": "Technologies que j'utilise"
+  },
+
+
+  "contactSection": {
+    "sectionSubText": "Prenons contact",
+    "sectionHeadText": "Contact.",
+    "nameLabel": "Votre nom",
+    "emailLabel": "Votre email",
+    "messageLabel": "Votre message",
+    "namePlaceholder": "Quel est votre joli nom ?",
+    "emailPlaceholder": "Quelle est votre adresse web ?",
+    "messagePlaceholder": "Que voulez-vous dire ?",
+    "sendingButton": "Envoi...",
+    "sendButton": "Envoyer",
+    "successMessage": "Merci. Je reviendrai vers vous dès que possible.",
+    "errorMessage": "Ahh, quelque chose a mal tourné. Veuillez réessayer." },
+
+
+
+
+"projects": {
+    "Traveler": {
+      "name": "Voyageur",
+      "description": "Une plateforme d'agence de voyage qui permet aux utilisateurs d'explorer des destinations, de réserver des forfaits voyage et de gérer leurs voyages facilement avec des recommandations personnalisées et un support client."
+    },
+    "ENTV Park Auto System": {
+      "name": "Système de gestion de parc ENTV",
+      "description": "Un système de gestion complet pour la flotte de véhicules d'ENTV, conçu pour optimiser les opérations de flotte et améliorer l'efficacité. Planifiez l'entretien régulier. La plateforme inclut également des notifications."
+    },
+    "NBR Airways System": {
+      "name": "Système de gestion des vols NBR",
+      "description": "Un système de gestion pour NBR Airways qui rationalise la planification des vols, la gestion des réservations et la communication avec les clients, garantissant une expérience efficace et conviviale."
+    }
+  },
+  "tags": {
+    "html": "HTML",
+    "css": "CSS",
+    "mysql": "MySQL",
+    "laravel": "Laravel",
+    "scss": "SCSS",
+    "nodejs": "Node.js",
+    "react": "React",
+    "tailwand": "Tailwind",
+    "inertia": "Inertia"
+  },
+  "projectsSection": {
+    "sectionSubText": "Mes Travaux",
+    "sectionHeadText": "Projets",
+    "introText": "Voici quelques projets sur lesquels j'ai travaillé. Ils montrent mes compétences et ma passion pour le développement."
+    
+  }
+  
+}
+
+

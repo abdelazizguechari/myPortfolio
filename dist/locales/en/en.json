@@ -1,0 +1,94 @@
+{
+   "about": "About",
+  "tech": "Technology",
+  "project": "Projects",
+  "contact": "Contact",
+  "Web Developer": "Web Developer",
+  "graphicDesigner": "Graphic Designer",
+  "uiuxDesigner": "UI/UX Designer",
+  "contentCreator": "Content Creator",
+  "html": "HTML",
+  "css": "CSS",
+  "javascript": "JavaScript",
+  "bootstrap": "Bootstrap",
+  "reactjs": "React.js",
+  "tailwind": "Tailwind CSS",
+  "nodejs": "Node.js",
+  "mysql": "MySQL",
+  "afterEffect": "After Effects",
+  "git": "Git",
+  "figma": "Figma",
+  "docker": "Docker",
+  "projectDescription": "A project description goes here.",
+
+ 
+ 
+   "hero": {
+    "greeting": "Hello, I'm Aziz",
+    "description": "Let's collaborate together "
+  },
+
+ "aboutSection": {
+    "sectionSubText": "about me",
+    "sectionHeadText": "How I Can Help",
+    "introText": "I'm a dedicated web developer and graphic designer with expertise in modern tools and frameworks, including Laravel, React, After Effects, Figma, Illustrator, and Photoshop. I specialize in crafting visually striking designs and building scalable, user-friendly web applications. With a focus on collaboration and innovation, I turn creative ideas into functional, impactful solutions. Let’s work together to bring your vision to life!"
+  },
+ 
+
+   "work": {
+    "sectionSubText": "What Tech I Use",
+    "sectionHeadText": "Technologies I Use"
+  },
+
+
+
+   "contactSection": {
+    "sectionSubText": "Get in touch",
+    "sectionHeadText": "Contact.",
+    "nameLabel": "Your Name",
+    "emailLabel": "Your email",
+    "messageLabel": "Your Message",
+    "namePlaceholder": "What's your good name?",
+    "emailPlaceholder": "What's your web address?",
+    "messagePlaceholder": "What you want to say?",
+    "sendingButton": "Sending...",
+    "sendButton": "Send",
+    "successMessage": "Thank you. I will get back to you as soon as possible.",
+    "errorMessage": "Ahh, something went wrong. Please try again." },
+
+     "projects": {
+    "Traveler": {
+      "name": "Traveler",
+      "description": "A travel agency platform that allows users to explore destinations, book travel packages, and manage their trips seamlessly with curated recommendations and customer support."
+    },
+    "ENTV Park Auto System": {
+      "name": "ENTV Park Auto System",
+      "description": "A comprehensive management system for ENTV's vehicle fleet, developed to streamline fleet operations and improve efficiency. Schedule routine maintenance. The platform also includes notifications."
+    },
+    "NBR Airways System": {
+      "name": "NBR Airways System",
+      "description": "An airline management system for NBR Airways that streamlines flight scheduling, booking management, and customer communication, ensuring an efficient and user-friendly experience."
+    }
+  },
+  "tags": {
+    "html": "HTML",
+    "css": "CSS",
+    "mysql": "MySQL",
+    "laravel": "Laravel",
+    "scss": "SCSS",
+    "nodejs": "Node.js",
+    "react": "React",
+    "tailwand": "Tailwind",
+    "inertia": "Inertia"
+  },
+  "projectsSection": {
+    "sectionSubText": "My Work",
+    "sectionHeadText": "Projects",
+    "introText": "Here are some of the projects I have worked on. They showcase my skills and passion for development."
+  }
+
+
+  
+   
+  
+}
